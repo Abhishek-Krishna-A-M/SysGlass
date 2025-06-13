@@ -29,9 +29,9 @@ export const StatsProvider = ({ children }) => {
       setError(null);
       
       const [deviceRes, usageRes, networkRes] = await Promise.all([
-        axios.get('http://localhost:3000/api/device'),
-        axios.get('http://localhost:3000/api/system'),
-        axios.get('http://localhost:3000/api/network'),
+        axios.get('/api/device'),
+        axios.get('/api/system'),
+        axios.get('/api/network'),
       ]);
 
       // Parse the actual backend data structure
